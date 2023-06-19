@@ -83,6 +83,4 @@ test:
 #
 production:
   <<: *default
-  database: avatarApp_production
-  username: avatarApp
-  password: <%= ENV["AVATARAPP_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
