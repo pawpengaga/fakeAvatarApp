@@ -70,3 +70,6 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+#Fue insertado con "bundle add faker"
+gem "faker", "~> 3.2"
