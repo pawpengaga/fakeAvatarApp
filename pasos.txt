@@ -1,0 +1,46 @@
+TAREA: modelo post que tendrá title, content, y url (url a una imagen que se encuentre en internet)
+---------------------------------------------------------------------------------------------
+
+1. rails new [name] --database=postgresql
+2. hacer commit por primera vez para llevar track de los archivos creados
+3. cambiar el nombre de la branch a main
+4. generar el modelo, con rails g model
+5. poner las credenciales de la base de datos en config, en database.yml
+6. hacer las migraciones para crear la base de datos. Usar de golpe rails db:create db:migrate
+7. verificar en pgadmin que esté todo bien hecho hasta este punto
+
+8. Crear un nuevo controlador con un index y al menos 3 vistas más, la del formulario, una de creación y una de éxito
+    8.1. Instalar bootstrap y añadir un container a yield si nos sobra tiempo
+9. configurar las rutas, añadir un post a la vista de creación y borrar su archivo html
+    9.1. Configurar las rutas correctamente es un paso muy importante
+    9.2. Configurar un root en este paso
+
+10. Crear el formulario en la vista correspondiente usando <%=form_with%>
+    10.1. El formulario debe tener una url apuntando hacia el controlador de create. El que definimos como POST en las rutas
+    10.2. Model contendrá una variable de instancia que usarmemos más adelante
+    10.3 El name: de los campos rellenables es una referencia directa para llenar la base de datos, necesita apuntar de forma precisa. Se usan los [] porque la información viene en HASHES
+11. Añadir un enlace que apunte al formulario en el index
+    11.1 CONSULTAR EL DIRECTORIO DE RUTAS DE RAILS CONSTANTEMENTE A PARTIR DE ESTE PUNTO
+
+12. Ir al metodo controlador que tenemos asignado como POST en las rutas. Ahí es donde manda el formulario creado
+13. Definir la variable de instancia @[name], la que fue referenciada en el formulario
+    13.1. Referenciar al metodo posts_params como una nueva instancia de Post
+    13.2 Crear una condición if que nos redirija la VISTA DE EXITO con el helper redirect_to
+    13.3 Incluir un else que vuelva generar la vista del formulario con :new si algo salió mal
+14. Crear el método posts_params hasta el fondo de la clase. Params limita los parámetros permitidos como seguridad.
+    14.1. Especificar que los únicos parámetros permitidos seran los especificados en el formulario, cuyos campos existen en la base de datos y les hemos apuntado con tremendos hashes.
+
+LISTO. UNA VEZ SEGUIDOS TODOS ESTOS PASOS LA CONEXIÓN ESTÁ HECHA Y LOS DATOS SE ESTÁN MANDANDO CORRECTAMENTE. EL FORMULARIO ESTÁ COMPLETADO.
+
+
+
+
+
+
+
+
+
+
+
+
+

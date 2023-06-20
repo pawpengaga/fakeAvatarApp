@@ -1,0 +1,24 @@
+<h1>MyForm</h1>
+<hr>
+<%= form_with url: 'testings/create', model:@formu, method: :post do |form| %>
+    <div class="col-4">
+        <div class="mb-4" >
+            <%= form.label :title, "Título de la imagen", class: "form-label fs-5 fw-300" %>
+            <%= form.text_field :title, name: "image[title]", class: "form-control"  %>
+        </div>
+
+        <div class="mb-4" >
+            <%= form.label :description, "Desripción de la imagen", class: "form-label fs-5 fw-300" %>
+            <%= form.text_area :description, name: "image[description]", class: "form-control", size: "50x5" %> <!--Esto fue modificado, se le añadio un size:-->
+        </div>
+
+        <div class="mb-4" >
+            <%= form.label :url_image, "URL de la imagen", class: "form-label fs-5 fw-300" %>
+            <%= form.text_field :url_image, name: "image[url_image]", class: "form-control" %>
+        </div>
+
+        <div class="mb-4" >
+            <%=form.submit "Subir", class: "btn btn-dark" %>
+        </div>
+    </div>
+<%end%>
