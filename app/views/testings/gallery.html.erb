@@ -1,12 +1,9 @@
-<div class="mt-5">
-    <% @imagenes.each do |o| %>
-        <div class="row mt-4 justify-content-center">
-            <div class="col-4">
-                <h3 class="text-center"><%= o.title %></h3>
-                <p class="text-center"><%= o.description%></p>
-                <%= image_tag o.url_image, class: "w-100"%>
-                <hr>
-            </div>
+<% @imagenes.each do |o| %>
+    <div class="row justify-content-center">
+        <div class="border-bottom border-end border-start py-4 col-sm-12 col-md-10 col-lg-8 col-xl-6 col-xxl-4">
+            <h3 class="text-center"><%= o.title %></h3>
+            <p class="text-center"><%= o.description%></p>
+            <%= image_tag o.url_image, class: "w-100"%>
         </div>
-    <%end%>
-</div>
+    </div>
+<%end%>
