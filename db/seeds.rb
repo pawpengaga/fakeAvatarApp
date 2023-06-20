@@ -8,4 +8,5 @@
 
 100.times do |y|
     Image.create(url_image: Faker::Avatar.image)
+    User.create(name: Faker::Name.first_name, comment: Faker::Lorem.paragraphs(number: 1))
 end
